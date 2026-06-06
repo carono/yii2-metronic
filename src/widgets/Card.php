@@ -67,6 +67,11 @@ class Card extends Widget
     /** @var string Имя view-файла закрывающей части. */
     public string $closeViewName = 'card-close';
 
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function init(): void
     {
         parent::init();

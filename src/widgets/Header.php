@@ -54,6 +54,12 @@ class Header extends Widget
         }
     }
 
+    /** Фиксируем путь к views — чтобы наследники в приложении переиспользовали vendor-шаблоны. */
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function run(): string
     {
         return $this->render($this->layout === 'demo9' ? 'header-demo9' : 'header-demo3', [

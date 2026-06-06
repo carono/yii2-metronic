@@ -26,6 +26,11 @@ class Drawer extends Widget
 
     public string $closeViewName = 'drawer-close';
 
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function init(): void
     {
         parent::init();

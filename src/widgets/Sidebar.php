@@ -25,6 +25,11 @@ class Sidebar extends Widget
     /** @var string Имя view-файла для рендера. Можно переопределить для кастомной разметки. */
     public string $viewName = 'sidebar';
 
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function run(): string
     {
         return $this->render($this->viewName, [

@@ -31,6 +31,11 @@ class Avatar extends Widget
 
     public string $viewName = 'avatar';
 
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function run(): string
     {
         Html::addCssClass($this->options, 'kt-avatar ' . $this->size);

@@ -16,7 +16,7 @@ use carono\metronic\assets\MetronicAsset;
  * <?= Html::img(Media::url('avatars/300-1.png'), ['class' => 'kt-avatar']) ?>
  * ```
  */
-final class Media
+class Media
 {
     /** @var string|null Кэш baseUrl опубликованного бандла. */
     private static ?string $baseUrl = null;

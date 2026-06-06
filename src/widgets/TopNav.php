@@ -22,6 +22,11 @@ class TopNav extends Widget
 
     public string $id = 'navbar';
 
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function run(): string
     {
         return $this->render('topnav', [

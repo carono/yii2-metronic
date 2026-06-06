@@ -20,6 +20,11 @@ class Navbar extends Widget
 
     public string $viewName = 'navbar';
 
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function run(): string
     {
         return $this->render($this->viewName, [

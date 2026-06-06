@@ -30,6 +30,11 @@ class Tabs extends Widget
 
     public string $viewName = 'tabs';
 
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function run(): string
     {
         Html::addCssClass($this->tabsOptions, 'kt-tabs kt-tabs-' . $this->variant);

@@ -54,6 +54,11 @@ class ItemList extends Widget
     /** @var string Имя view-файла одной строки. */
     public string $itemViewName = 'item-list-row';
 
+    public function getViewPath()
+    {
+        return __DIR__ . '/views';
+    }
+
     public function run(): string
     {
         return $this->render($this->viewName, [
