@@ -17,48 +17,35 @@ composer require carono/yii2-metronic
 ## Установка ассетов Metronic (обязательный шаг)
 
 В репозитории **не лежат** лицензионные файлы Metronic (KTUI, Keenicons, скомпилированный
-Tailwind CSS, медиафайлы — всё это интеллектуальная собственность Keenthemes и
-распространяется по их лицензии). Их нужно распаковать вручную в `vendor/carono/yii2-metronic/src/web/`
+Tailwind CSS, медиафайлы — всё это интеллектуальная собственность Keenthemes).
+Их нужно распаковать вручную в `vendor/carono/yii2-metronic/src/web/metronic/`
 из официальной поставки.
 
 1. Купите/получите Metronic v9 (Tailwind) на [keenthemes.com](https://keenthemes.com/metronic/).
-2. В архиве найдите папку `dist/assets/` (или `demo3/assets/` / `demo9/assets/` — содержимое
-   одинаковое для тех файлов, что нужны пакету).
-3. Скопируйте в `vendor/carono/yii2-metronic/src/web/` следующее:
+2. Возьмите папку `demo3/assets/` (или `demo9/assets/` — содержимое одинаковое) из архива.
+3. Скопируйте её **целиком** в пакет как `metronic/`:
 
-   ```text
-   src/web/
-   ├── css/
-   │   ├── core.bundle.css        ← assets/css/core.bundle.css
-   │   └── styles.css             ← assets/css/styles.css
-   ├── js/
-   │   ├── core.bundle.js         ← assets/js/core.bundle.js
-   │   ├── widgets/               ← assets/js/widgets/  (general.js, calendar.js, …)
-   │   └── layouts/               ← assets/js/layouts/  (demo1.js, …)
-   ├── vendors/
-   │   ├── ktui/
-   │   │   └── ktui.min.js        ← assets/vendors/ktui/ktui.min.js
-   │   └── keenicons/
-   │       ├── styles.bundle.css  ← assets/vendors/keenicons/styles.bundle.css
-   │       └── fonts/             ← assets/vendors/keenicons/fonts/
-   └── media/
-       ├── app/                   ← assets/media/app/         (логотипы, favicon)
-       ├── avatars/               ← assets/media/avatars/     (если используете Avatar)
-       ├── brand-logos/           ← assets/media/brand-logos/
-       ├── flags/                 ← assets/media/flags/
-       ├── illustrations/         ← assets/media/illustrations/
-       └── file-types/            ← assets/media/file-types/
+   ```bash
+   cp -r metronic-tailwind-html/demo3/assets vendor/carono/yii2-metronic/src/web/metronic
    ```
 
-4. Сбросьте кэш опубликованных ассетов вашего приложения, чтобы Yii AssetManager
-   переопубликовал содержимое:
+   В результате должна получиться структура:
+
+   ```text
+   src/web/metronic/
+   ├── css/         (styles.css, core.bundle.css)
+   ├── js/          (core.bundle.js, widgets/, layouts/)
+   ├── vendors/     (ktui/, keenicons/)
+   └── media/       (app/, avatars/, brand-logos/, flags/, illustrations/, …)
+   ```
+
+4. Сбросьте кэш опубликованных ассетов:
 
    ```bash
    rm -rf web/assets/*
    ```
 
-Файлы пакета (`composer update`/`composer install`) ассеты не перезатирает —
-они остаются нетронутыми после распаковки.
+Подробнее — `vendor/carono/yii2-metronic/src/web/README.md`.
 
 ## Layouts
 

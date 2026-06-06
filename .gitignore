@@ -12,6 +12,6 @@ composer.phar
 Thumbs.db
 
 # Лицензионные ассеты Metronic — НЕ коммитятся в публичный репозиторий.
-# Пользователь распаковывает их из официальной поставки Keenthemes
-# (см. README.md → раздел "Установка ассетов Metronic").
-/src/web/
+# Пользователь распаковывает их в src/web/metronic/ из официальной поставки
+# Keenthemes (см. README.md → раздел "Установка ассетов Metronic").
+/src/web/metronic/

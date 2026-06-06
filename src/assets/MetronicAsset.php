@@ -11,7 +11,7 @@ use yii\web\View;
  */
 class MetronicAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/carono/yii2-metronic/src/web';
+    public $sourcePath = '@vendor/carono/yii2-metronic/src/web/metronic';
 
     public $css = [
         'vendors/keenicons/styles.bundle.css',
