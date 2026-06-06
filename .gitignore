@@ -1,0 +1,12 @@
+# phpstorm
+.idea
+# vscode
+.vscode
+
+# composer
+/vendor
+composer.phar
+
+# OS
+.DS_Store
+Thumbs.db

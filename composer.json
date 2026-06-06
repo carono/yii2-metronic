@@ -1,0 +1,42 @@
+{
+    "name": "carono/yii2-metronic",
+    "description": "Metronic v9 Tailwind admin theme for Yii2 — layouts, widgets and assets (demo3 sidebar + demo9 topnav)",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "metronic", "tailwind", "admin", "theme"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "carono",
+            "email": "info@carono.ru"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "yiisoft/yii2": "~2.0.45",
+        "carono/yii2-bower-asset": "~1.0",
+        "npm-asset/apexcharts": "^3.45 || ^4.0",
+        "npm-asset/jquery": "^3.7",
+        "npm-asset/clipboard": "^2.0",
+        "npm-asset/canvas-confetti": "^1.9"
+    },
+    "suggest": {
+        "npm-asset/dropzone": "Drag-and-drop file upload widget",
+        "npm-asset/leaflet": "Map widget",
+        "npm-asset/prismjs": "Code syntax highlighting",
+        "npm-asset/tinymce": "WYSIWYG editor widget",
+        "npm-asset/datatables.net": "Advanced data tables",
+        "npm-asset/--fullcalendar--core": "FullCalendar widget"
+    },
+    "autoload": {
+        "psr-4": {
+            "carono\\metronic\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "minimum-stability": "stable"
+}
